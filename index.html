@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AR.js Example</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script>
+      // Создайте сцену AR.
+      var ar = new AR.ARScene({
+        canvas: document.getElementById("canvas"),
+        width: 500,
+        height: 500,
+      });
+
+      // Добавьте объект FBX к сцене AR.
+      var obj = new AR.Object({
+        source: "Idle.fbx",
+        scale: 0.1,
+      });
+      ar.addObject(obj);
+
+      // Запустите AR-приложение
+      ar.start();
+    </script>
+  </body>
+</html>
